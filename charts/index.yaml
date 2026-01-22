@@ -3,12 +3,12 @@ entries:
   two-tier-app:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2026-01-22T21:16:12.684584+01:00"
+    created: "2026-01-22T21:37:45.9804145+01:00"
     description: A simple 2-tier app with web server and database
-    digest: 06f80019daa315381b62b06170ef024ce5c9583165a61c1a6a100329aae411aa
+    digest: 31fae101021eaa554645942ed1d860adfdd54ea62c103602bd617b2089d9b479
     name: two-tier-app
     type: application
     urls:
     - two-tier-app-0.1.0.tgz
     version: 0.1.0
-generated: "2026-01-22T21:16:12.6828219+01:00"
+generated: "2026-01-22T21:37:45.9796623+01:00"
