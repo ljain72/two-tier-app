@@ -1,0 +1,13 @@
+############################DATABASE################################
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  type: ClusterIP
+  selector:
+    app: db
+  ports:
+    - port: {{ .Values.db.service.port }}
+      targetPort: {{ .Values.db.service.port }}

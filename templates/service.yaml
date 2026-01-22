@@ -1,0 +1,34 @@
+############################WEB-SERVER###############################
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-svc
+spec:
+  type: {{ .Values.web.service.type }}
+  selector:
+    app: web-app
+  ports:
+    - port: {{ .Values.web.service.port }}
+      targetPort: 5000
+
+------
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web-svc
+            port:
+              number: 80
+
+

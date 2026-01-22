@@ -1,0 +1,11 @@
+web:
+  image: labdhi96jain/my-simple-app:latest
+  replicas: 1
+  service:
+    type: NodePort
+    port: 80
+
+db:
+  image: postgres:15
+  service:
+    port: 5432
